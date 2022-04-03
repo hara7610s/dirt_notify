@@ -8,7 +8,7 @@ def read_spreadsheet():
     client = gspread.authorize(creds)
 
     # get all values as list of lists
-    sheet = client.open("dirt_DB").sheet1
+    sheet = client.open("Dirt_DB").sheet1
     mylists = sheet.get_all_values()
     
     # make dictionary with encoding
