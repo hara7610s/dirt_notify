@@ -10,7 +10,7 @@ def notify_entry(entry_dict, my_dict):
             RaceName = entry_dict[my_horse][2].decode('utf-8')
             HorseName = my_horse.decode('utf-8')
             
-            notify_list.append('\n{RaceCourse}{RaceNum} {RaceName} {HorseName}')
+            notify_list.append(f'\n{RaceCourse}{RaceNum} {RaceName} {HorseName}')
             time.sleep(1)
     
     line.notify_message(notify_list)
