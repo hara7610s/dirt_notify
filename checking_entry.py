@@ -3,7 +3,7 @@ import time
 import line
 
 def notify_entry(date, entry_dict, my_dict):
-    message = date
+    message = str(date)
     for my_horse in my_dict:
         if my_horse in list(entry_dict.keys()):
             RaceCourse = entry_dict[my_horse][0].decode('utf-8')
