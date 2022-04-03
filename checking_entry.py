@@ -1,8 +1,9 @@
+from email import message
 import time
 import line
 
 def notify_entry(date, entry_dict, my_dict):
-    notify_list = [date]
+    message = [date]
     for my_horse in my_dict:
         if my_horse in list(entry_dict.keys()):
             RaceCourse = entry_dict[my_horse][0].decode('utf-8')
@@ -10,7 +11,7 @@ def notify_entry(date, entry_dict, my_dict):
             RaceName = entry_dict[my_horse][2].decode('utf-8')
             HorseName = my_horse.decode('utf-8')
             
-            notify_list.append(f'\n{RaceCourse}{RaceNum} {RaceName} {HorseName}')
+            message += f'\n{RaceCourse}{RaceNum} {RaceName} {HorseName}'
             time.sleep(1)
     
-    line.notify_message(notify_list)
+    line.notify_message(message)
