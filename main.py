@@ -23,11 +23,9 @@ def main():
 
         # call my horse list
         my_dict = spreadsheet.read_spreadsheet()
-
-        line.notify_message(tomorrow)
         
         # match entry list and my horse list
-        checking_entry.notify_entry(entry_dict, my_dict)
+        checking_entry.notify_entry(tomorrow, entry_dict, my_dict)
 
 if __name__ == "__main__":
     main()
