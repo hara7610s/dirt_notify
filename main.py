@@ -8,7 +8,7 @@ import checking_entry
 
 def main():
     # find race pages tomorrow
-    tomorrow = datetime.date.today() + datetime.timedelta(days=6)
+    tomorrow = datetime.date.today() + datetime.timedelta(days=1)
     race_id_list = find_race.get_race_list(tomorrow)
     
     # make a list of horses entered tomorrow
